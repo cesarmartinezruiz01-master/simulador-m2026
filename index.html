@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simulador Mundial 2026</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#101827" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Miniweb interactiva</p>
+      <h1>Simulador Mundial 2026</h1>
+      <p>Captura marcadores, marca partidos jugados y revisa quién avanza.</p>
+    </div>
+    <button id="resetBtn" class="danger">Reiniciar</button>
+  </header>
+
+  <main>
+    <section class="panel tabs">
+      <button class="tab active" data-view="groupsView">Grupos</button>
+      <button class="tab" data-view="thirdsView">Mejores terceros</button>
+      <button class="tab" data-view="knockoutView">Fase final</button>
+    </section>
+
+    <section id="groupsView" class="view active">
+      <div id="groupsContainer" class="groups"></div>
+    </section>
+
+    <section id="thirdsView" class="view">
+      <div class="panel">
+        <h2>Ranking de terceros lugares</h2>
+        <p class="muted">Avanzan los 8 mejores terceros, además de los dos primeros de cada grupo.</p>
+        <div id="thirdsTable"></div>
+      </div>
+    </section>
+
+    <section id="knockoutView" class="view">
+      <div class="panel">
+        <h2>Fase final</h2>
+        <p class="muted">El cuadro se llena automáticamente con clasificados. Puedes capturar goles en cada eliminatoria.</p>
+        <div id="knockoutContainer"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Guardado automático en este dispositivo · Funciona mejor en GitHub Pages, Netlify o Vercel</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
